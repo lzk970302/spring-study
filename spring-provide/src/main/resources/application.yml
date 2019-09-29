@@ -1,0 +1,16 @@
+
+server:
+  port: 8001
+ 
+spring:
+  application:
+    name: spring-provide
+ 
+#注册中心指向start    
+eureka:
+  instance:
+    instance-id: spring-provide
+    appname: ${spring.application.name}
+  client: 
+    service-url: 
+      defaultZone: http://127.0.0.1:7001/eureka/
